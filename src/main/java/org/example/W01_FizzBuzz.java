@@ -7,13 +7,13 @@ public class W01_FizzBuzz {
 
     public static void showFizzBuzz(int n){
         List<String> answer = new ArrayList<>();
-        for(int i = 0; i < n ; i++) {
-            if (i % 3 == 0) {
+        for(int i = 1; i < n ; i++) {
+            if (i % 15 == 0) {
+                answer.add("FizzBuzz");
+            } else if (i % 3 == 0) {
                 answer.add("Fizz");
             } else if (i % 5 == 0) {
                 answer.add("Buzz");
-            } else if (i % 3 == 0 && i % 5 == 0) {
-                answer.add("FizzBuzz");
             } else {
                 answer.add(String.valueOf(i));
             }
@@ -21,6 +21,6 @@ public class W01_FizzBuzz {
         System.out.println(answer);
     }
     public static void main(String[] args){
-        showFizzBuzz(5);
+        showFizzBuzz(50);
     }
 }
